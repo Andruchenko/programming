@@ -5,10 +5,10 @@ using namespace std;
 
 float* MemoryArray(int);
 void OutputArray(int, float*);
-void One(int&, float*&);
-void Two(int&, float*&);
-void Three(int&, float*&);
-void Four(int&, float*&);
+void Function_One(int&, float*&);
+void Function_Two(int&, float*&);
+void Function_Three(int&, float*&);
+void Function_Four(int&, float*&);
 
 int main()
 {
@@ -69,7 +69,7 @@ void OutputArray(int count, float* arr)
 		cout << arr[i] << " ";
 	}
 }
-void One(int &count, float *&arr)
+void Function_One(int &count, float *&arr)
 {
 	int index; float number;
 	cout << "напишите число, которое будет добавлено в массив.Число: " << endl; cin >> number;
@@ -92,7 +92,7 @@ void One(int &count, float *&arr)
 	delete[] arr;
 	arr = buff;
 }
-void Two(int& count, float*& arr)
+void Function_Two(int& count, float*& arr)
 {
 	int index;
 	cout << "выберите место, с которого нужно удалить элемент." << endl;
@@ -113,10 +113,11 @@ void Two(int& count, float*& arr)
 	arr = buff;
 	count -= 1;
 }
-void Three(int& count, float*& arr)
+void Function_Three(int& count, float*& arr)
 {
 	int element; float number; int z = 0, index;
-	cout << "напишите число, для добавления в массив.Число: " << endl; cin >> number;
+	cout << "напишите число, для добавления в массив.Число: " << endl; 
+	cin >> number;
 	cout << "напишите элемент, после которого будет подставлено число.Элемент:" << endl; cin >> element;
 	for (int i = 0; i < count && z == 0; i++)
 	{
@@ -141,7 +142,7 @@ void Three(int& count, float*& arr)
 		count = count + 1;
 	}
 }
-void Four(int& count, float*& arr)
+void Function_Four(int& count, float*& arr)
 {
 	float element; int z = 0;
 	cout << "задайте элемент для удаления .Элемент:" << endl;
